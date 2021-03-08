@@ -12,56 +12,54 @@
 
   <body>
     <header class="header">
-      <nav class="header_nav">
-        <div class="header_nav_logo">Мир красоты</div>
-        <div class="header_nav_links">
-          <div class="header_nav_links_prices">Услуги и цены</div>
-          <div class="header_nav_links_masters">Мастера</div>
-          <div class="header_nav_links_works">Наши работы</div>
-          <div class="header_nav_links_about">О нас</div>
-          <div class="header_nav_links_feedback">Контакты</div>
+      <nav class="header__nav">
+        <div class="nav__logo">Мир красоты</div>
+        <div class="nav__links">
+          <ul>
+            <li><span>Услуги и цены</span></li>
+            <li><span>Мастера</span></li>
+            <li><span>Наши работы</span></li>
+            <li><span>О нас</span></li>
+            <li><span>Контакты</span></li>
+          </ul>
         </div>
-        <div class="header_nav_contacts">
-          <span class="header_nav_contacts_capText">8 (499) 686-17-62</span>
-          <span class="header_nav_contacts_subText"
-            >с 10.00 до 19.00 без выходных</span
-          >
+        <div class="nav__contacts">
+          <span class="contacts__capText">8 (499) 686-17-62</span>
+          <span class="contacts__subText">с 10.00 до 19.00 без выходных</span>
         </div>
       </nav>
 
-      <div class="header_main">
-        <div class="header_main_content">
-          <div class="header_main_content_title">
-            Создай свой образ вместе с нами
-          </div>
-          <div class="header_main_content_desc">
-            Идеальный образ за 60 минут
-          </div>
-          <button class="header_main_content_btn">
-            <span class="header_main_content_btn_text">Записаться онлайн</span>
+      <div class="header__main">
+        <div class="main__content">
+          <div class="content__title">Создай свой образ вместе с нами</div>
+          <div class="content__desc">Идеальный образ за 60 минут</div>
+          <button class="content__btn">
+            <span class="btn__text">Записаться онлайн</span>
           </button>
         </div>
-        <div class="header_main_image">
-          <img src="images/beautifulWoman.png" alt="beautiful woman" />
+        <div class="main__image">
+          <div class="circled-woman">
+            <img src="images/beautifulWoman.png" alt="beautiful woman" />
+          </div>
         </div>
-        <div class="header_main_links">
-          <img src="images/instagram.png" alt="instagram" />
-          <img src="images/vk.png" alt="vk" />
-          <img src="images/youtube.png" alt="youtube" />
+        <div class="main__links">
+          <a href="#"><img src="images/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="images/vk.png" alt="vk" /></a>
+          <a href="#"> <img src="images/youtube.png" alt="youtube" /></a>
         </div>
       </div>
     </header>
 
     <main class="main">
-      <div class="main_aboutUs">
-        <div class="main_aboutUs_title">О салоне</div>
-        <div class="main_aboutUs_content">
-          <div class="main_aboutUs_content_left">
-            <div class="main_aboutUs_content_left_desc">
+      <div class="main__about">
+        <div class="about__title">О салоне</div>
+        <div class="about__content">
+          <div class="content__left-side">
+            <div class="left-side__desc">
               Мир красоты - это уютный салон в самом центре города. Здесь
               работают профессиональные визажисты, стилисты и мастера татуажа
             </div>
-            <div class="main_aboutUs_content_left_subDesc">
+            <div class="left-side__subDesc">
               Красота и хороший уход никогда не выходят из моды. Мы приглашаем
               Вас в место, где гармония обретает форму, а внешность становится
               отражением внутреннего мира. Новая жизнь начинается с небольших
@@ -69,40 +67,42 @@
               индивидуальность во внешнем облике. Мы создаем стиль – вместе с
               Вами и для Вас.
             </div>
-            <div class="main_aboutUs_content_left_optional">
+            <div class="left-side__optional">
               <a href="#">Развернуть</a>
             </div>
           </div>
 
-          <div class="main_aboutUs_content_right">
-            <div class="main_aboutUs_content_right_video">
-              <img src="images/video.png" alt="video" />
+          <div class="content__right-side">
+            <div class="right-side__video">
+              <img src="images/iconPlay.png" alt="video" />
+              <div class="video__desc">Короткое видео о нас</div>
             </div>
           </div>
         </div>
-        <div class="main_benefit">
-          <div class="main_benefit_item">
+
+        <div class="main__benefit">
+          <div class="benefit__item">
             <img src="images/pic.png" alt="picture" />
-            <div class="main_benefit_item_title">Удобные кабинеты</div>
-            <div class="main_benefit_item_description">
+            <div class="item__title">Удобные кабинеты</div>
+            <div class="item__description">
               Комфорт и стиль - принцип создания кабинетов салона красоты.
               Только эстетика и удобство для Вас
             </div>
           </div>
 
-          <div class="main_benefit_item">
+          <div class="benefit__item">
             <img src="images/makeUp.png" alt="make-up device" />
-            <div class="main_benefit_item_title">Качественная косметика</div>
-            <div class="main_benefit_item_description">
+            <div class="item__title">Качественная косметика</div>
+            <div class="item__description">
               Используем профессиональные материалы высшего качества лучших
               брендов
             </div>
           </div>
 
-          <div class="main_benefit_item">
+          <div class="benefit__item">
             <img src="images/scissors.png" alt="scissors" />
-            <div class="main_benefit_item_title">Опытные мастера</div>
-            <div class="main_benefit_item_description">
+            <div class="item__title">Опытные мастера</div>
+            <div class="item__description">
               Работают только опытные мастера с чувством стиля. Смотрите наших
               специалистов в разделе Мастера
             </div>
@@ -111,16 +111,18 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="footer_left">
+      <div class="footer__left-side">
         <span>© 2020 «Море красоты»</span>
         <a href="#">Политика конфиденциальности</a>
       </div>
 
-      <div class="footer_right">
-        <span>Услуги и цены</span>
-        <span>Мастера</span>
-        <span>Наши работы</span>
-        <span>Контакты</span>
+      <div class="footer__right-side">
+        <ul>
+          <li><span>Услуги и цены</span></li>
+          <li><span>Мастера</span></li>
+          <li><span> Наши работы</span></li>
+          <li><span>Контакты</span></li>
+        </ul>
       </div>
     </footer>
   </body>
