@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+@import 'libs';
 * {
   outline: none;
   font-family: "Montserrat", sans-serif;
 }
 
 .header {
-  background: url("images/background.png");
+  background: url("../images/background.png");
   padding: 0 10%;
   overflow: hidden;
 }
@@ -215,6 +215,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  max-height: 270px;
+ 
 }
 
 .content__left-side {
@@ -245,10 +247,16 @@
 
 .content__right-side {
   flex-basis: 37%;
+  max-width: 400px;
 }
+.content__right-side{
+  & img{
+    cursor: pointer;
+  }
+}
+
 .right-side__video {
-  cursor: pointer;
-  background-image: url("images/video.png");
+  background-image: url("../images/video.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
@@ -303,6 +311,8 @@
   max-width: 296px;
 }
 
+
+
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -336,7 +346,7 @@
 }
 .footer__right-side li {
   list-style-type: none;
-  display: inline;
+  display: inline; 
 }
 
 .footer__right-side span {
@@ -345,5 +355,5 @@
 }
 
 .footer__right-side span:hover {
-  color: #00bf78;
+  color: #00bf78; 
 }
