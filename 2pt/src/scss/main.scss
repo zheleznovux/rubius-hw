@@ -1,8 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import 'libs';
+@import 'components/index.scss';
+@import 'layout/index.scss';
+
 * {
   outline: none;
   font-family: "Montserrat", sans-serif;
+}
+
+$main-color: #333333;
+body {
+  min-width: 320px;
+  color: $main-color;
+}
+
+.wrapper {
+  padding: 0 10%;
+  background-color: #ffffff;
+}
+
+.main__masters {
+  padding: 0 10%;
 }
 
 .header {
@@ -10,26 +28,26 @@
   padding: 0 10%;
   overflow: hidden;
 }
-.main {
-  padding: 0 10%;
-  background-color: #ffffff;
-}
+
 .footer {
   padding: 0 10%;
   background-color: #ffffff;
 }
-@media (min-width: 1470px) {
-  .header {
-    padding: 0 15%;
-    overflow: hidden;
-  }
-  .main {
-    padding: 0 15%;
-  }
-  .footer {
-    padding: 0 15%;
-  }
-}
+// @media (min-width: 1540px) {
+//   .header {
+//     padding: 0 15%;
+//     overflow: hidden;
+//   }
+//   .footer {
+//     padding: 0 15%;
+//   }
+//   .wrapper {
+//     padding: 0 15%;
+//   }
+//   .main__masters {
+//     padding: 0 15%;
+//   }
+// }
 
 .header__nav {
   padding: 30px 0px;
@@ -48,7 +66,6 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 20px;
-  color: #333333;
 }
 
 .header__links {
@@ -82,7 +99,6 @@
   display: inherit;
   flex-direction: column;
   font-style: normal;
-  color: #333333;
   position: relative;
   font-weight: 500;
   font-size: 18px;
@@ -118,52 +134,23 @@
   justify-content: center;
 }
 
-.title {
-  font-weight: 600;
-  font-size: 48px;
-  color: #333333;
-}
+
 
 .header__title {
+  font-weight: 600;
   font-size: 48px;
   line-height: 59px;
-  color: #333333;
 }
 
-.header__desc {
+.header__description {
   padding-top: 16px;
   padding-bottom: 60px;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
-  color: #333333;
 }
 
-.btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #fb9475;
-  border-radius: 24px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-large {
-  width: 203px;
-  height: 48px;
-}
-
-.btn__text {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  color: #ffffff;
-}
 
 .header__image {
   display: flex;
@@ -215,12 +202,13 @@
 }
 
 .main__about {
-  padding: 6em 0;
+  padding: 100px 0 50px 0;
 }
 
 .main__title {
+  font-weight: 600;
+  font-size: 48px;
   line-height: 59px;
-  color: #333333;
   padding-bottom: 32px;
 }
 
@@ -229,7 +217,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-
 }
 
 .content__left-side {
@@ -238,15 +225,14 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  color: #333333;
 }
 
-.content__desc {
+.content__description {
   font-size: 20px;
   line-height: 32px;
 }
 
-.content__subDesc {
+.content__sub-description {
   font-size: 16px;
   line-height: 26px;
 }
@@ -282,12 +268,12 @@
   align-items: center;
 }
 
-.content__video-desc {
+.content__video-description {
   padding-top: 10px;
   color: #ffffff;
 }
 
-.benefit {
+.benefits {
   padding-top: 6em;
   display: flex;
   flex-direction: row;
@@ -295,14 +281,13 @@
   justify-content: space-around;
 }
 
-.benefit__item {
+.benefits__item {
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  color: #333333;
   line-height: 22px;
   text-align: center;
 }
@@ -313,6 +298,7 @@
 }
 
 .benefit__item-title {
+  font-weight: 600;
   font-size: 18px;
   padding-bottom: 12px;
   padding-top: 32px;
@@ -338,7 +324,6 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: #333333;
 }
 .footer__left-side {
   display: flex;
@@ -369,4 +354,29 @@
 
 .footer__right-side span:hover {
   color: #00bf78; 
+}
+
+
+/*products*/
+.main__products {
+  padding: 50px 0;
+}
+
+
+
+.main__prices {
+  padding: 50px 0;
+}
+
+.main__prices {
+  margin-top: 50px;
+}
+
+.dark-back {
+  background-color: #F8F6F7;
+}
+
+.main__masters {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }

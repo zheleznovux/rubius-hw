@@ -1,0 +1,29 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fb9475;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+
+    &-large {
+        width: 203px;
+        height: 48px;   
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    &-small {  
+        max-width: 112px;
+        max-height: 34px;
+        padding: 10px 20px;
+    }
+  }
