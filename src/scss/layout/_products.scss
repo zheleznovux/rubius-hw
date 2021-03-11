@@ -8,11 +8,10 @@
     
     &__items {
       display: grid;
-      grid-template-columns: repeat(3, min-content);
+      grid-template-columns: repeat(auto-fit, minmax(240px, 350px));
       grid-template-rows: 1fr 1fr;
       justify-content: space-between;
       align-content: space-around;
-      justify-content: space-between;
       row-gap: 48px;
     }
     &__item {

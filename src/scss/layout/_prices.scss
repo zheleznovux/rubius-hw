@@ -11,7 +11,7 @@
       padding-bottom: 50px;
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       padding-bottom: 50px;
   
       &-item {
@@ -32,8 +32,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, min-content);
-      column-gap: 126px;
+      column-gap: 20%;
       row-gap: 36px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .prices__list{
+      column-gap: 10px;
     }
   }
   
@@ -58,7 +63,7 @@
   
     &__value {
       font-weight: 600;
-      font-size: 20px;
+      font-size: 1.25em;
       line-height: 24px;
       color: #00BF78;
     }

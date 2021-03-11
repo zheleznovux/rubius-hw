@@ -9,6 +9,8 @@
 }
 
 $main-color: #333333;
+$font-size: 16px;
+
 body {
   min-width: 320px;
   color: $main-color;
@@ -372,7 +374,7 @@ body {
   margin-top: 50px;
 }
 
-.dark-back {
+.masters-dark-back  {
   background-color: #F8F6F7;
 }
 
