@@ -1,71 +1,72 @@
 .prices {
-
     &__title {
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 59px;
-      padding-bottom: 32px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        padding-bottom: 32px;
     }
-  
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, min-content);
+        column-gap: 15%;
+        row-gap: 36px;
+    }
+
     &__menu {
-      padding-bottom: 50px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding-bottom: 50px;
-  
-      &-item {
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+    }
+
+    &__menu-item {
         margin-right: 28px;
         font-size: 14px;
         line-height: 17px;
         border-bottom: 2px solid transparent;
         cursor: pointer;
-  
+        transition: 0.3s;
+
         &:hover {
-          color: #00BF78;
-          border-bottom: 2px solid #00BF78;
+            color: #00bf78;
+            border-bottom: 2px solid #00bf78;
         }
-      }
     }
-  
-    &__list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(4, min-content);
-      column-gap: 20%;
-      row-gap: 36px;
+}
+
+@media screen and (max-width: 768px) {
+    .prices__list {
+        display: flex;
+        flex-direction: column;
     }
-  }
-  @media screen and (max-width: 768px) {
-    .prices__list{
-      column-gap: 10px;
-    }
-  }
-  
-  .price {
+}
+
+.price {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
-  
+
     &__title {
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
-      padding-bottom: 8px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 8px;
     }
-  
+
     &__description {
-      font-size: 14px;
-      line-height: 17px;
+        font-size: 14px;
+        line-height: 17px;
     }
-  
+
     &__value {
-      font-weight: 600;
-      font-size: 1.25em;
-      line-height: 24px;
-      color: #00BF78;
+        font-weight: 600;
+        font-size: 1.25em;
+        line-height: 24px;
+        color: #00bf78;
     }
-  
-  }
+}

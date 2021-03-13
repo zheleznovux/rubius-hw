@@ -1,0 +1,74 @@
+// imported benefits from '../components/benefits';
+
+.about {
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        padding-bottom: 32px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    &__left-side {
+        flex-basis: 48%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    &__sub-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    &__optional > a {
+        font-size: 14px;
+        line-height: 17px;
+        color: #278aff;
+        text-decoration: none;
+    }
+
+    &__right-side {
+        width: 443px;
+        height: 295px;
+
+        & img {
+            cursor: pointer;
+        }
+    }
+
+    &__video {
+        background-image: url("../images/video.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__video-description {
+        padding-top: 10px;
+        color: #ffffff;
+    }
+
+    &__benefits {
+        padding-top: 50px;
+    }
+}

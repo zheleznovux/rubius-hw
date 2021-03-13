@@ -1,0 +1,71 @@
+// imported nav from '../components/nav';
+// imported btn from '../components/btn';
+
+.header {
+    background: url("../images/background.png");
+    overflow: hidden;
+
+    &__nav {
+        padding: 30px 15px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__hero {
+        flex-basis: 44%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+    }
+
+    &__description {
+        padding-top: 16px;
+        padding-bottom: 60px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__image {
+        z-index: 1;
+        position: relative;
+        display: flex;
+
+        & img {
+            z-index: 1;
+            position: inherit;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: #fb9475;
+            border-radius: 50%;
+            height: 91%;
+            width: 91%;
+            top: 30%;
+            left: 5%;
+            z-index: 0;
+            transition: 1.5s;
+        }
+
+        &:hover::before {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 10px #fb9475;
+            transition: 1.5s;
+        }
+    }
+}

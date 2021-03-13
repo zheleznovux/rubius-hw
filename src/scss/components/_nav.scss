@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 15px; //???
+
+    &__logo {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    &__contacts {
+        display: inherit;
+        flex-direction: column;
+        position: relative;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 14px;
+    }
+
+    &__capText {
+        text-align: right;
+        margin-left: 20px;
+    }
+
+    &__subText {
+        position: absolute;
+        font-size: 11px;
+        line-height: 14px;
+        top: 150%;
+        right: 0px;
+    }
+}

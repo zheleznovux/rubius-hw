@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    line-height: 15px;
+
+    &__left-side {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        & > span {
+            padding-bottom: 8px;
+        }
+
+        & > a {
+            text-decoration-line: underline;
+        }
+    }
+
+    &__right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & ul {
+            margin: 0;
+        }
+
+        & li {
+            list-style-type: none;
+            display: inline;
+        }
+
+        & span {
+            margin-left: 28px;
+            cursor: pointer;
+
+            &:hover {
+                color: #00bf78;
+            }
+        }
+    }
+}

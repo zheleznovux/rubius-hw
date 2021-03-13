@@ -7,9 +7,9 @@
     border: none;
     cursor: pointer;
 
-    &-large {
+    &_large {
         width: 203px;
-        height: 48px;   
+        height: 48px;
     }
 
     &__text {
@@ -21,9 +21,9 @@
         color: #ffffff;
     }
 
-    &-small {  
+    &_small {
         max-width: 112px;
         max-height: 34px;
         padding: 10px 20px;
     }
-  }
+}
