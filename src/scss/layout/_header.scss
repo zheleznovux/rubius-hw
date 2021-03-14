@@ -68,4 +68,9 @@
             transition: 1.5s;
         }
     }
+
+    &__links{
+        display: flex;
+        align-items: center;
+    }
 }

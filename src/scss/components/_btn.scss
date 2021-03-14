@@ -7,9 +7,14 @@
     border: none;
     cursor: pointer;
 
-    &_large {
+    &_medium {
         width: 203px;
         height: 48px;
+    }
+
+    &_large {
+        width: 100%;
+        max-height: 48px;
     }
 
     &__text {
@@ -19,6 +24,7 @@
         line-height: 14px;
         text-align: center;
         color: #ffffff;
+        cursor: pointer;
     }
 
     &_small {

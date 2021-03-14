@@ -1,10 +1,9 @@
 .links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    vertical-align: middle;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -17,11 +16,12 @@
     & li {
         display: inline-block;
         vertical-align: auto;
+        padding: 0 14px;
     }
 
-    & ul li a {
+    & a {
         display: inline;
-        margin: 5px 14px;
+        // margin: 0 14px;
         cursor: pointer;
         text-decoration: none;
 
@@ -31,7 +31,21 @@
     }
 
     & img {
-        margin: 10px 0;
+        // margin: 10px 0;
         cursor: pointer;
+    }
+
+    &_column {
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 170px;
+        min-height: 120px;
+    }
+
+    &_row {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 140px;
+        min-width: 110px;
     }
 }

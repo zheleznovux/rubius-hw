@@ -19,11 +19,13 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 14px;
+        
     }
 
     &__capText {
         text-align: right;
         margin-left: 20px;
+        cursor: text;
     }
 
     &__subText {
@@ -32,5 +34,6 @@
         line-height: 14px;
         top: 150%;
         right: 0px;
+        cursor: text;
     }
 }

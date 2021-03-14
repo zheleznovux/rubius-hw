@@ -8,8 +8,8 @@
     </head>
 
     <body>
-        <header class="header">
 
+        <header class="header">
             <!-- navbar { -->
             <nav class="container nav header__nav">
                 <div class="nav__logo">Мир красоты</div>
@@ -42,9 +42,11 @@
                     <div class="header__description">
                         Идеальный образ за 60 минут
                     </div>
-                    <button class="header__btn btn btn_large">
-                        <span class="btn__text">Записаться онлайн</span>
-                    </button>
+                    <div class="header__btn">
+                        <button class="btn btn_medium">
+                            <span class="btn__text">Записаться онлайн</span>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="header__image">
@@ -54,7 +56,8 @@
                     />
                 </div>
 
-                <div class="header__links links">
+                <div class="header__links">
+                    <div class="links links_column">
                     <a href="#"
                         ><img src="images/instagram.png" alt="instagram"
                     /></a>
@@ -89,9 +92,7 @@
                             индивидуальность во внешнем облике. Мы создаем стиль
                             – вместе с Вами и для Вас.
                         </div>
-                        <div class="about__optional">
-                            <a href="#">Развернуть</a>
-                        </div>
+                        <div class="about__optional">Развернуть</div>
                     </div>
 
                     <div class="about__right-side">
@@ -151,9 +152,11 @@
                         <div class="product__description">
                             Аппаратный, комбинированный или классический.
                         </div>
-                        <button class="btn btn_small">
-                            <span class="btn__text">Записаться</span>
-                        </button>
+                        <div class="product_btn">
+                            <button class="btn btn_small">
+                                <span class="btn__text">Записаться</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div
@@ -169,9 +172,11 @@
                             Гель-лак наносится в несколько слоев с использование
                             базы и топа. Каждый слой полимеризуется в LED-лампе.
                         </div>
-                        <button class="btn btn_small">
-                            <span class="btn__text">Записаться</span>
-                        </button>
+                        <div class="product_btn">
+                            <button class="btn btn_small">
+                                <span class="btn__text">Записаться</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div
@@ -187,9 +192,11 @@
                             Выполняется в одноразовых перчатках наполненных
                             увлажняющим лосьоном.
                         </div>
-                        <button class="btn btn_small">
-                            <span class="btn__text">Записаться</span>
-                        </button>
+                        <div class="product_btn">
+                            <button class="btn btn_small">
+                                <span class="btn__text">Записаться</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div
@@ -204,9 +211,11 @@
                         <div class="product__description">
                             Аппаратный, комбинированный или классический.
                         </div>
-                        <button class="btn btn_small">
-                            <span class="btn__text">Записаться</span>
-                        </button>
+                        <div class="product_btn">
+                            <button class="btn btn_small">
+                                <span class="btn__text">Записаться</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div
@@ -223,15 +232,17 @@
                             увеличивается на 80%, также выводит токсины и
                             укрепляет суставы.
                         </div>
-                        <button class="btn btn_small">
-                            <span class="btn__text">Записаться</span>
-                        </button>
+                        <div class="product_btn">
+                            <button class="btn btn_small">
+                                <span class="btn__text">Записаться</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- } pop products -->
 
-            <!--price list {-->
+            <!-- price list {-->
             <div class="main__prices prices container">
                 <div class="prices__title">Услуги и цены</div>
 
@@ -351,8 +362,8 @@
             <!--} price-list -->
 
             <!-- masters card { -->
-            <div class="main__masters masters masters_dark_back">
-                <div class="container">
+            <div class="main__masters main_dark-background">
+                <div class="masters container">
                     <div class="masters__title">Мастера</div>
                     <div class="masters__description">
                         Дружная команда настоящих профессионалов
@@ -423,7 +434,70 @@
                     </div>
                 </div>
             </div>
-            <!--} masters card-->
+            <!-- } masters card -->
+
+            <!-- portfolio { -->
+            <div class="main__portfolio portfolio container">
+                <div class="portfolio__title">Наши работы</div>
+                <div class="portfolio__carousel">
+
+                </div>
+                <div class="portfolio__brands brands">
+                    <div class="brands__title">Бренды, которые мы используем в работе</div>
+                    <div class="brands__images">
+                        <img src="/images/brands1.png" alt="">
+                        <img src="/images/brands2.png" alt="">
+                        <img src="/images/brands3.png" alt="">
+                        <img src="/images/brands4.png" alt="">
+                        <img src="/images/brands5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- } portfolio -->
+
+            <!-- contacts and feedback form { -->
+            <div class="main__contacts main_dark-background">
+                <div class="contacts container">
+                    <div class="contacts__left-side">
+                        <div class="contacts__title">Контакты</div>
+                        <div class="contacts__description">
+                            <span>Томск, проспект Ленина, дом 13</span> 
+                            <span>8 (499) 686-17-62</span>
+                            <span>info@more-krasoty.ru</span> 
+                        </div>
+                        <div class="contacts__links-desc">Мы в социальных сетях</div>
+                        <div class="contacts__links links links_row">
+                            <a href="#"
+                                ><img src="images/instagram.png" alt="instagram"
+                            /></a>
+                            <a href="#"><img src="images/vk.png" alt="vk" /></a>
+                            <a href="#">
+                                <img src="images/youtube.png" alt="youtube"
+                            /></a>
+                        </div>
+                    </div>
+                    <div class="contacts__right-side">
+                        <div class="contacts__feedback feedback-form">
+                            <div class="feedback-form__title">Быстрая запись</div>
+                            <div class="feedback-form__description">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</div>
+                            <div class="feedback-form__user-contacts">
+                                <textarea name="" id="" cols="30" rows="1" placeholder="Ваше имя"></textarea>
+                            </div>
+                            <div class="feedback-form__user-contacts">
+                                <textarea name="" id="" cols="30" rows="1" placeholder="+7 (___) ___-__-__"></textarea>
+                            </div>
+                            <div class="feedback-form__btn">
+                                <button class="btn btn_large">
+                                    <span class="btn__text">Записаться</span>
+                                </button>
+                            </div>
+                            <div class="feedback-form__subdescription">Нажимая на кнопку вы соглашаетесь с <a href="#">обработкой персональных данных</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--} contacts and feedback form -->
         </main>
 
         <!--footer {-->
