@@ -481,17 +481,19 @@
                         <div class="contacts__feedback feedback-form">
                             <div class="feedback-form__title">Быстрая запись</div>
                             <div class="feedback-form__description">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</div>
-                            <div class="feedback-form__user-contacts">
-                                <textarea name="" id="" cols="30" rows="1" placeholder="Ваше имя"></textarea>
-                            </div>
-                            <div class="feedback-form__user-contacts">
-                                <textarea name="" id="" cols="30" rows="1" placeholder="+7 (___) ___-__-__"></textarea>
-                            </div>
-                            <div class="feedback-form__btn">
-                                <button class="btn btn_large">
-                                    <span class="btn__text">Записаться</span>
-                                </button>
-                            </div>
+                            <form id="feedback-form">
+                                <div class="feedback-form__user-contacts">
+                                    <input name="user-name" type="text" placeholder="Ваше имя">
+                                </div>
+                                <div class="feedback-form__user-contacts">
+                                    <input name="user-phone" type="text" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <div class="feedback-form__btn">
+                                    <button class="btn btn_large">
+                                        <span class="btn__text">Записаться</span>
+                                    </button>
+                                </div>
+                            </form>
                             <div class="feedback-form__subdescription">Нажимая на кнопку вы соглашаетесь с <a href="#">обработкой персональных данных</a></div>
                         </div>
                     </div>
