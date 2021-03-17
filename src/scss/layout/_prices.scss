@@ -20,27 +20,27 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 50px;
+        justify-content: space-between;
     }
 
     &__menu-item {
-        margin-right: 28px;
         font-size: 14px;
-        line-height: 17px;
-        border-bottom: 2px solid transparent;
-        cursor: pointer;
-        transition: 0.3s;
+        // line-height: 17px;
+        padding: 4px;
+        display: inline-block;
+        justify-content: center;
 
-        &:hover {
+        & span {
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
             color: #00bf78;
             border-bottom: 2px solid #00bf78;
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .prices__list {
-        display: flex;
-        flex-direction: column;
+        }
+        
     }
 }
 
@@ -68,5 +68,17 @@
         font-size: 1.25em;
         line-height: 24px;
         color: #00bf78;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+
+    .prices{
+
+        &__list {
+        display: flex;
+        flex-direction: column;
+        }
     }
 }

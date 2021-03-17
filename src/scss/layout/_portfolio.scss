@@ -30,9 +30,8 @@
         align-items: center;
 
         & > img {
-            object-fit: contain;
-            padding-left: 15px;
-            padding-right: 15px;
+            object-fit:scale-down;
+            padding: 15px;
         }
     }
 }

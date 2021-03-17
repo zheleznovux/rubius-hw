@@ -31,9 +31,30 @@
             }
         }
     }
+    &__right-side {
+        flex-basis: 50%;
+        align-items: flex-end;
+    }
+    &__left-side {
+        flex-basis: 50%;
+    }
+
+    &__feedback {
+        float: right;
+    }
 
     &__links-desc {
         padding-top: 24px;
         padding-bottom: 14px;
     }
+    &__links {
+        padding-bottom: 34px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .contacts {
+        flex-direction: column;
+    }    
 }

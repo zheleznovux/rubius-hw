@@ -5,10 +5,26 @@
         <title>Мир красоты</title>
         <link rel="shortcut icon" href="https://static.figma.com/app/icon/1/favicon.png" type="image/png">
         <link rel="stylesheet" href="./css/main.css" />
-        <meta name="viewport" content="width=device-width, initial" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
     </head>
 
     <body>
+
+        <div id="myNav" class="overlay">
+  
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <a href="#" target="_blank">Услуги и цены</a>
+              <a href="" target="_blank">Мастера</a>
+              <a href="" target="_blank">Наши работы</a>
+              <a href="" target="_blank">О нас</a>
+              <a href="" target="_blank">Контакты</a>
+            </div>
+            
+        </div>
 
         <header class="header">
             <!-- navbar { -->
@@ -31,6 +47,7 @@
                         >с 10.00 до 19.00 без выходных</span
                     >
                 </div>
+                <div onclick="openNav()" class="nav__menu">&#9776;</div>
             </nav>
             <!-- } navbar -->
 
@@ -96,14 +113,12 @@
                         <div class="about__optional">Развернуть</div>
                     </div>
 
-                    <div class="about__right-side">
-                        <div class="about__video">
-                            <img src="images/iconPlay.png" alt="video" />
+                        <div class="about__video" style="background-image: url(../images/video.png);">
                             <div class="about__video-description">
-                                Короткое видео о нас
+                                <img src="images/iconPlay.png" alt="video" />
+                                <span>Короткое видео о нас</span> 
                             </div>
                         </div>
-                    </div>
                 </div>
 
                 <div class="about__benefits benefits row">
@@ -248,12 +263,12 @@
                 <div class="prices__title">Услуги и цены</div>
 
                 <div class="prices__menu">
-                    <div class="prices__menu-item">Стрижка и укладка</div>
-                    <div class="prices__menu-item">Косметология</div>
-                    <div class="prices__menu-item">Маникюр и педикюр</div>
-                    <div class="prices__menu-item">Макияж</div>
-                    <div class="prices__menu-item">Брови и ресницы</div>
-                    <div class="prices__menu-item">Массаж</div>
+                    <div class="prices__menu-item"><span>Стрижка и укладка</span> </div>
+                    <div class="prices__menu-item"><span>Косметология</span> </div>
+                    <div class="prices__menu-item"><span>Маникюр и педикюр</span></div>
+                    <div class="prices__menu-item"><span>Макияж</span></div>
+                    <div class="prices__menu-item"><span>Брови и ресницы</span></div>
+                    <div class="prices__menu-item"><span>Массаж</span></div>
                 </div>
 
                 <div class="prices__list">
@@ -371,7 +386,7 @@
                     </div>
 
                     <div class="masters__list row">
-                        <div class="masters__item master col-3">
+                        <div class="masters__item master col-12 col-sm-6 col-md-3">
                             <div
                                 class="master__photo"
                                 style="
@@ -387,7 +402,7 @@
                             </div>
                         </div>
 
-                        <div class="masters__item master col-3">
+                        <div class="masters__item master col-12 col-sm-6 col-md-3">
                             <div
                                 class="master__photo"
                                 style="
@@ -403,7 +418,7 @@
                             </div>
                         </div>
 
-                        <div class="masters__item master col-3">
+                        <div class="masters__item master col-12 col-sm-6 col-md-3">
                             <div
                                 class="master__photo"
                                 style="
@@ -417,7 +432,7 @@
                             </div>
                         </div>
 
-                        <div class="masters__item master col-3">
+                        <div class="masters__item master col-12 col-sm-6 col-md-3">
                             <div
                                 class="master__photo"
                                 style="
@@ -520,5 +535,17 @@
         </footer>
         <!--} footer-->
     </body>
-    <script></script>
+    <script>
+
+        const nav = document.getElementById('myNav');
+
+        function openNav() {
+            return nav.style.height = "100%";
+        } 
+
+        function closeNav() {
+            return nav.style.height = "0%";
+        }
+
+    </script>
 </html>

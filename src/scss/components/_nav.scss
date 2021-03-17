@@ -1,3 +1,5 @@
+@import '../var';
+
 .nav {
     display: flex;
     align-items: center;
@@ -5,6 +7,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 15px; //???
+    position: relative;
 
     &__logo {
         font-weight: bold;
@@ -36,4 +39,83 @@
         right: 0px;
         cursor: text;
     }
+    &__menu{
+        display: none;
+        font-size: 30px;
+        font-weight: 700;
+        cursor: pointer;
+        
+    }
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(51,51,51); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff !important;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+        text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #999 !important;
+}
+
+/* Position the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    font-size: 60px !important; /* Override the font-size specified earlier (36px) for all navigation links */
+}
+
+@media screen and (max-width: 991px) {
+    .nav {
+    
+        &__logo {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    
+        &__links {
+            display: none!important;
+        }
+    
+        &__contacts {
+           display: none;
+        }
+
+        &__menu {
+            display: flex;
+        }
+    }
+
 }
