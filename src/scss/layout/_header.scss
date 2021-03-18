@@ -1,0 +1,117 @@
+// imported nav from '../components/nav';
+// imported btn from '../components/btn';
+@import '../var';
+
+
+
+
+.header {
+    background: url("../images/background.png");
+    overflow: hidden;
+    position: relative;
+
+    &__nav {
+        padding: 30px 15px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__hero {
+        flex-basis: 84%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: $main-font-size ;    
+    }
+
+    &__description {
+        padding-top: 16px;
+        padding-bottom: 40px;
+        font-size: $main-font-size / 2.4;
+        line-height: 24px;
+    }
+
+    &__image {
+        z-index: 1;
+        position: relative;
+        display: flex;
+
+        & img {
+            z-index: 1;
+            position: inherit;
+            object-fit: cover;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: #fb9475;
+            border-radius: 50%;
+            height: 91%;
+            width: 91%;
+            top: 30%;
+            left: 5%;
+            z-index: 0;
+            transition: 1.5s;
+        }
+
+        &:hover::before {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 10px #fb9475;
+            transition: 1.5s;
+        }
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    &__btn{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 992px) {
+
+    .header{
+
+        &__image {
+
+            & img {
+                display: none;
+            }
+
+            &::before {
+                opacity: 0;
+                position: absolute;
+                content: "";
+                background-color: #fb9475;
+                border-radius: 50%;
+                height: 400px;
+                width: 400px;
+                top: 50%;
+                left: 50%;
+                transform:translateX(-200%);
+                z-index: 0;
+                transition: 1.5s;
+            }
+        }
+
+        &__description {
+            padding-bottom: 5px;
+        }
+    }
+}

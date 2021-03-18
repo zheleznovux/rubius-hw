@@ -1,0 +1,37 @@
+// imported brands from '../components/brands';
+
+.portfolio {
+    
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+    }
+
+    &__brands {
+        padding-top: 100px;
+    }
+}
+
+.brands{
+    &__title{
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    &__images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            object-fit:scale-down;
+            padding: 15px;
+        }
+    }
+}

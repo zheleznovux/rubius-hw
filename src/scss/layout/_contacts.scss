@@ -1,0 +1,60 @@
+@import '../var';
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+        color: $main-color;
+        padding-top: 38px;
+        padding-bottom: 22px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        line-height: 20px;
+
+        & span {
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            &:last-child {
+                text-decoration: underline;
+                color: #007bff;
+                cursor: text;
+            }
+        }
+    }
+    &__right-side {
+        flex-basis: 50%;
+        align-items: flex-end;
+    }
+    &__left-side {
+        flex-basis: 50%;
+    }
+
+    &__feedback {
+        float: right;
+    }
+
+    &__links-desc {
+        padding-top: 24px;
+        padding-bottom: 14px;
+    }
+    &__links {
+        padding-bottom: 34px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .contacts {
+        flex-direction: column;
+    }    
+}

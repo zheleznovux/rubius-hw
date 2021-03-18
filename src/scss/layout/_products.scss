@@ -1,0 +1,35 @@
+.products {
+    &__title {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+
+    &__item {
+        padding-top: 48px;
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+
+    &__icon {
+        max-height: 180px;
+        max-width: 350px;
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 8px;
+    }
+
+    &__description {
+        font-size: 12px;
+        line-height: 20px;
+        padding-bottom: 16px;
+    }
+}

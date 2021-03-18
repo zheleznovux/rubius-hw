@@ -1,0 +1,68 @@
+// div class="contacts__feedback feedback-form">
+//     <div class="feedback-form__title">Быстрая запись</div>
+//     <div class="feedback-form__description">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</div>
+//     <textarea class="feedback-form__user-name" name="" id="" cols="30" rows="1" placeholder="Ваше имя"></textarea>
+//     <textarea class="feedback-form_user-contact" name="" id="" cols="30" rows="1" placeholder="+7 (___) ___-__-__"></textarea>
+//     <button class="feedback-form__btn btn btn_large">
+//         <span class="btn__text">Записаться</span>
+//     </button>
+//     <div class="feedback-form__subdescription">Нажимая на кнопку вы соглашаетесь с <a href="#">обработкой персональных данных</a></div>
+// </div>
+
+.feedback-form {
+
+    max-width: 445px;
+    max-height: 406px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 40px 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 14px;
+        padding-bottom: 15px;
+    }
+
+    &__description {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 25px;
+    }
+
+    &__user-contacts {
+        display: flex;
+        padding: 10px 0;
+
+        & input {
+            width: 100%;
+            resize: none;
+            padding: 10px;
+            border: 1px solid #D8D8D8;
+            box-sizing: border-box;
+            border-radius: 6px;
+            cursor: text;
+        } 
+    }
+
+    &__btn {
+        padding: 10px 0;
+    }
+
+    &__subdescription {
+        padding-top: 6px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+
+        & a {
+            text-decoration: underline;
+        }
+    }
+
+}

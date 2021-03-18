@@ -1,0 +1,124 @@
+// imported benefits from '../components/benefits';
+
+.about {
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        padding-bottom: 32px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    &__left-side {
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    &__sub-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    &__optional {
+        font-size: 14px;
+        line-height: 17px;
+        color: #278aff;
+        text-decoration: none;
+        cursor: pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__video {
+        flex-basis: 45%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        height: 300px;
+        border-radius: 8px;
+        display: flex;
+
+        & img {
+            cursor: pointer;
+        }
+    }
+
+    &__video-description {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        
+        & span {
+            padding-top: 10px;
+            color: #ffffff;
+        }
+    }
+
+    &__benefits {
+        padding-top: 50px;
+    }
+}
+
+.benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.benefit {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 22px;
+    text-align: center;
+    max-width: 350px;
+
+    & img {
+        max-height: 50px;
+        max-width: 50px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        padding-bottom: 12px;
+        padding-top: 32px;
+    }
+
+    &__description {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    .about {
+        &__content {
+            display: block;
+        }
+
+        &__sub-description {
+            display: none;
+        }
+    }
+}
