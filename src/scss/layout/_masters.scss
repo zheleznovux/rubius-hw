@@ -3,7 +3,7 @@
     &__title {
         font-weight: bold;
         font-size: 48px;
-        line-height: 59px;
+        // line-height: 59px;
         padding-bottom: 32px;
     }
 
@@ -101,7 +101,17 @@
     }
 }
 
-@media only screen and (max-width:768px){
+@media screen and (max-width: 992px) {
+    .masters {
+
+        &__title{
+            font-size: 36px;
+            padding-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
     .master {
 
         &__experience {

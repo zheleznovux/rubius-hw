@@ -6,7 +6,7 @@
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
-        line-height: 59px;
+        // line-height: 59px;
     }
 
     &__brands {
@@ -32,6 +32,19 @@
         & > img {
             object-fit:scale-down;
             padding: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .portfolio {
+    
+        &__title {
+            font-size: 36px;
+        }
+
+        &__brands {
+            padding-top: 50px;
         }
     }
 }

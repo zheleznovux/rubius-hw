@@ -2,7 +2,7 @@
     &__title {
         font-weight: 600;
         font-size: 48px;
-        line-height: 59px;
+        // line-height: 59px;
         padding-bottom: 32px;
     }
 
@@ -25,7 +25,6 @@
 
     &__menu-item {
         font-size: 14px;
-        // line-height: 17px;
         padding: 4px;
         display: inline-block;
         justify-content: center;
@@ -33,12 +32,21 @@
         & span {
             border-bottom: 2px solid transparent;
             cursor: pointer;
-            transition: 0.3s;
+            // transition: 0.3s;
 
             &:hover {
             color: #00bf78;
-            border-bottom: 2px solid #00bf78;
+            // font-weight: 600;
+            border-color:  #00bf78;
+            }
         }
+        
+        &_active {
+            // font-weight: 600;z
+            & span {
+                color: #00bf78;
+                border-bottom: 2px solid #00bf78;
+            }
         }
         
     }
@@ -76,9 +84,27 @@
 
     .prices{
 
+        &__title {
+            font-size: 36px;
+            padding-bottom: 16px;
+        }
+
+        &__menu {
+            padding-bottom: 25px;
+        }
+
         &__list {
         display: flex;
         flex-direction: column;
+        gap: 0px;
+        }
+
+        &__list-item {
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
         }
     }
 }

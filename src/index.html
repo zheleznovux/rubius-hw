@@ -20,7 +20,7 @@
               <a href="#" target="_blank">Услуги и цены</a>
               <a href="" target="_blank">Мастера</a>
               <a href="" target="_blank">Наши работы</a>
-              <a href="" target="_blank">О нас</a>
+              <a href="#about" target="_blank">О нас</a>
               <a href="" target="_blank">Контакты</a>
             </div>
             
@@ -31,13 +31,13 @@
             <nav class="container nav header__nav">
                 <div class="nav__logo">Мир красоты</div>
 
-                <div class="nav__links links">
+                <div class="nav__links links" id="links">
                     <ul>
-                        <li><a>Услуги и цены</a></li>
-                        <li><a>Мастера</a></li>
-                        <li><a>Наши работы</a></li>
-                        <li><a>О нас</a></li>
-                        <li><a>Контакты</a></li>
+                        <li><a class="prices-link">Услуги и цены</a></li>
+                        <li><a href="#masters">Мастера</a></li>
+                        <li><a href="#portfolio">Наши работы</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
 
@@ -90,7 +90,7 @@
 
         <main class="main">
             <!-- about us { -->
-            <div class="main__about about container">
+            <div class="main__about about container" id="about">
                 <div class="about__title">О салоне</div>
 
                 <div class="about__content">
@@ -153,22 +153,18 @@
             <!--} about us -->
 
             <!-- pop products { -->
-            <div class="main__products products container">
+            <div class="main__products products container" id="products">
                 <div class="products__title">Популярные услуги</div>
                 <div class="products__items row">
                     <div
                         class="products__item product col-12 col-sm-6 col-md-4"
                     >
-                        <img
-                            class="product__icon"
-                            src="images/hands.png"
-                            alt=""
-                        />
+                        <div class="product__img" style="background-image: url(images/hands.png)"></div>
                         <div class="product__title">Маникюр</div>
                         <div class="product__description">
                             Аппаратный, комбинированный или классический.
                         </div>
-                        <div class="product_btn">
+                        <div class="product__btn">
                             <button class="btn btn_small">
                                 <span class="btn__text">Записаться</span>
                             </button>
@@ -177,18 +173,14 @@
 
                     <div
                         class="products__item product col-12 col-sm-6 col-md-4"
-                    >
-                        <img
-                            class="product__icon"
-                            src="images/hands.png"
-                            alt=""
-                        />
+                    > 
+                        <div class="product__img" style="background-image: url(images/hands.png)"></div>
                         <div class="product__title">Покрытие гель-лак</div>
                         <div class="product__description">
                             Гель-лак наносится в несколько слоев с использование
                             базы и топа. Каждый слой полимеризуется в LED-лампе.
                         </div>
-                        <div class="product_btn">
+                        <div class="product__btn">
                             <button class="btn btn_small">
                                 <span class="btn__text">Записаться</span>
                             </button>
@@ -198,17 +190,13 @@
                     <div
                         class="products__item product col-12 col-sm-6 col-md-4"
                     >
-                        <img
-                            class="product__icon"
-                            src="images/hands.png"
-                            alt=""
-                        />
+                        <div class="product__img" style="background-image: url(images/hands.png)"></div>
                         <div class="product__title">Бразильский маникюр</div>
                         <div class="product__description">
                             Выполняется в одноразовых перчатках наполненных
                             увлажняющим лосьоном.
                         </div>
-                        <div class="product_btn">
+                        <div class="product__btn">
                             <button class="btn btn_small">
                                 <span class="btn__text">Записаться</span>
                             </button>
@@ -218,16 +206,12 @@
                     <div
                         class="products__item product col-12 col-sm-6 col-md-4"
                     >
-                        <img
-                            class="product__icon"
-                            src="images/hands.png"
-                            alt=""
-                        />
+                        <div class="product__img" style="background-image: url(images/hands.png)"></div>
                         <div class="product__title">Педикюр</div>
                         <div class="product__description">
                             Аппаратный, комбинированный или классический.
                         </div>
-                        <div class="product_btn">
+                        <div class="product__btn">
                             <button class="btn btn_small">
                                 <span class="btn__text">Записаться</span>
                             </button>
@@ -237,18 +221,14 @@
                     <div
                         class="products__item product col-12 col-sm-6 col-md-4"
                     >
-                        <img
-                            class="product__icon"
-                            src="images/hands.png"
-                            alt=""
-                        />
+                        <div class="product__img" style="background-image: url(images/hands.png)"></div>
                         <div class="product__title">Парафинотерапия</div>
                         <div class="product__description">
                             Благодаря этой процедуре увлажнение кожи
                             увеличивается на 80%, также выводит токсины и
                             укрепляет суставы.
                         </div>
-                        <div class="product_btn">
+                        <div class="product__btn">
                             <button class="btn btn_small">
                                 <span class="btn__text">Записаться</span>
                             </button>
@@ -259,11 +239,11 @@
             <!-- } pop products -->
 
             <!-- price list {-->
-            <div class="main__prices prices container">
+            <div class="main__prices prices container" id="prices">
                 <div class="prices__title">Услуги и цены</div>
 
                 <div class="prices__menu">
-                    <div class="prices__menu-item"><span>Стрижка и укладка</span> </div>
+                    <div class="prices__menu-item prices__menu-item_active"><span class="">Стрижка и укладка</span> </div>
                     <div class="prices__menu-item"><span>Косметология</span> </div>
                     <div class="prices__menu-item"><span>Маникюр и педикюр</span></div>
                     <div class="prices__menu-item"><span>Макияж</span></div>
@@ -378,7 +358,7 @@
             <!--} price-list -->
 
             <!-- masters card { -->
-            <div class="main__masters main_dark-background">
+            <div class="main__masters main_dark-background" id="masters">
                 <div class="masters container">
                     <div class="masters__title">Мастера</div>
                     <div class="masters__description">
@@ -453,7 +433,7 @@
             <!-- } masters card -->
 
             <!-- portfolio { -->
-            <div class="main__portfolio portfolio container">
+            <div class="main__portfolio portfolio container" id="portfolio">
                 <div class="portfolio__title">Наши работы</div>
                 <div class="portfolio__carousel">
 
@@ -472,7 +452,7 @@
             <!-- } portfolio -->
 
             <!-- contacts and feedback form { -->
-            <div class="main__contacts main_dark-background">
+            <div class="main__contacts main_dark-background" id="contacts">
                 <div class="contacts container">
                     <div class="contacts__left-side">
                         <div class="contacts__title">Контакты</div>
@@ -519,7 +499,7 @@
         </main>
 
         <!--footer {-->
-        <footer class="footer container">
+        <footer class="footer container" id="footer">
             <div class="footer__left-side">
                 <span>© 2020 «Море красоты»</span>
                 <a href="#">Политика конфиденциальности</a>
@@ -546,6 +526,8 @@
         function closeNav() {
             return nav.style.height = "0%";
         }
+
+        
 
     </script>
 </html>
