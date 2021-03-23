@@ -5,6 +5,9 @@
         <title>Мир красоты</title>
         <link rel="shortcut icon" href="https://static.figma.com/app/icon/1/favicon.png" type="image/png">
         <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
     </head>
 
@@ -61,7 +64,7 @@
                         Идеальный образ за 60 минут
                     </div>
                     <div class="header__btn">
-                        <button class="btn btn_medium">
+                        <button class="btn btn_medium pulse">
                             <span class="btn__text">Записаться онлайн</span>
                         </button>
                     </div>
@@ -165,7 +168,7 @@
                             Аппаратный, комбинированный или классический.
                         </div>
                         <div class="product__btn">
-                            <button class="btn btn_small">
+                            <button class="btn btn_small pulse">
                                 <span class="btn__text">Записаться</span>
                             </button>
                         </div>
@@ -181,7 +184,7 @@
                             базы и топа. Каждый слой полимеризуется в LED-лампе.
                         </div>
                         <div class="product__btn">
-                            <button class="btn btn_small">
+                            <button class="btn btn_small pulse">
                                 <span class="btn__text">Записаться</span>
                             </button>
                         </div>
@@ -197,7 +200,7 @@
                             увлажняющим лосьоном.
                         </div>
                         <div class="product__btn">
-                            <button class="btn btn_small">
+                            <button class="btn btn_small pulse">
                                 <span class="btn__text">Записаться</span>
                             </button>
                         </div>
@@ -212,7 +215,7 @@
                             Аппаратный, комбинированный или классический.
                         </div>
                         <div class="product__btn">
-                            <button class="btn btn_small">
+                            <button class="btn btn_small pulse">
                                 <span class="btn__text">Записаться</span>
                             </button>
                         </div>
@@ -229,7 +232,7 @@
                             укрепляет суставы.
                         </div>
                         <div class="product__btn">
-                            <button class="btn btn_small">
+                            <button class="btn btn_small pulse">
                                 <span class="btn__text">Записаться</span>
                             </button>
                         </div>
@@ -433,19 +436,87 @@
             <!-- } masters card -->
 
             <!-- portfolio { -->
-            <div class="main__portfolio portfolio container" id="portfolio">
-                <div class="portfolio__title">Наши работы</div>
-                <div class="portfolio__carousel">
+            <div class="main__portfolio portfolio" id="portfolio">
 
+                <div class=" container">
+                    <div class="portfolio__title">Наши работы</div>
+                    <div class="portfolio__btns">
+
+                        <button class="portfolio__btn-left">
+                            <div class="arrow" style="transform: scale(-1, 1);">
+                                <div></div>
+                            </div>
+                        </button>
+
+                        <button class="portfolio__btn-right">
+                            <div class="arrow">
+                                <div></div>
+                            </div>
+                        </button>
+
+                    </div>
                 </div>
-                <div class="portfolio__brands brands">
-                    <div class="brands__title">Бренды, которые мы используем в работе</div>
-                    <div class="brands__images">
-                        <img src="/images/brands1.png" alt="">
-                        <img src="/images/brands2.png" alt="">
-                        <img src="/images/brands3.png" alt="">
-                        <img src="/images/brands4.png" alt="">
-                        <img src="/images/brands5.png" alt="">
+
+                <div class="portfolio__carousel row">
+
+                    <div class="portfolio__item col-4">
+                        <a href="/images/works1.png" data-fancybox="images" data-caption="Брови">
+                            <div class="portfolio__img" style="background-image: url(/images/works1.png);">
+                            </div>
+                            <!-- <img src="/images/works1.png" alt=""> -->
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-4">
+                        <a href="/images/works2.png" data-fancybox="images" data-caption="Брови">
+                            <div class="portfolio__img" style="background-image: url(/images/works2.png);">
+                            </div>
+                            <!-- <img src="/images/works1.png" alt=""> -->
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-4">
+                        <a href="/images/works3.png" data-fancybox="images" data-caption="Брови">
+                            <div class="portfolio__img" style="background-image: url(/images/works3.png);">
+                            </div>
+                            <!-- <img src="/images/works1.png" alt=""> -->
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-4">
+                        <a href="/images/works4.png" data-fancybox="images" data-caption="Брови">
+                            <div class="portfolio__img" style="background-image: url(/images/works4.png);">
+                            </div>
+                            <!-- <img src="/images/works1.png" alt=""> -->
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-4">
+                        <a href="/images/works2.png" data-fancybox="images" data-caption="Брови">
+                            <div class="portfolio__img" style="background-image: url(/images/works2.png);">
+                            </div>
+                            <!-- <img src="/images/works1.png" alt=""> -->
+                        </a>
+                    </div>
+
+                    <div class="portfolio__item col-4">
+                        <a href="/images/works1.png" data-fancybox="images" data-caption="Брови">
+                            <div class="portfolio__img" style="background-image: url(/images/works1.png);">
+                            </div>
+                            <!-- <img src="/images/works1.png" alt=""> -->
+                        </a>
+                    </div>
+                </div>
+                <div class=" container">
+                    <div class="portfolio__brands brands">
+                        <div class="brands__title">Бренды, которые мы используем в работе</div>
+                        <div class="brands__images">
+                            <img src="/images/brands1.png" alt="">
+                            <img src="/images/brands2.png" alt="">
+                            <img src="/images/brands3.png" alt="">
+                            <img src="/images/brands4.png" alt="">
+                            <img src="/images/brands5.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -484,7 +555,7 @@
                                     <input name="user-phone" type="text" placeholder="+7 (___) ___-__-__">
                                 </div>
                                 <div class="feedback-form__btn">
-                                    <button class="btn btn_large">
+                                    <button class="btn btn_large pulse">
                                         <span class="btn__text">Записаться</span>
                                     </button>
                                 </div>
@@ -515,19 +586,9 @@
         </footer>
         <!--} footer-->
     </body>
-    <script>
-
-        const nav = document.getElementById('myNav');
-
-        function openNav() {
-            return nav.style.height = "100%";
-        } 
-
-        function closeNav() {
-            return nav.style.height = "0%";
-        }
-
-        
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+    
+    <script src="main.js"></script>
 </html>
