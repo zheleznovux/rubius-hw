@@ -7,14 +7,18 @@
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, min-content);
-        column-gap: 15%;
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
         row-gap: 36px;
+        justify-content: space-between;
+    }
+    
+    &__list-item {
+        flex-basis: 40%;
     }
 
-    &__menu {
+    &__links {
         padding-bottom: 50px;
         display: flex;
         flex-direction: row;
@@ -23,32 +27,37 @@
         justify-content: space-between;
     }
 
-    &__menu-item {
+    &__links-item {
+        margin-left: 20px;
+        margin-right: 20px;
+        white-space: nowrap;
         font-size: 14px;
-        padding: 4px;
+        // padding: 4px;
         display: inline-block;
-        justify-content: center;
+        // justify-content: center;
 
         & span {
-            border-bottom: 2px solid transparent;
             cursor: pointer;
-            // transition: 0.3s;
+            transition: 0.1s;
 
             &:hover {
             color: #00bf78;
-            // font-weight: 600;
-            border-color:  #00bf78;
             }
         }
-        
-        &_active {
-            // font-weight: 600;z
-            & span {
-                color: #00bf78;
-                border-bottom: 2px solid #00bf78;
-            }
-        }
-        
+    }
+}
+
+.active {
+    display: flex;
+}
+
+.active-links {
+
+    & span {
+        font-weight: 500;
+        color: #00bf78;
+        border-color:  #00bf78;
+        border-bottom: 2px solid;
     }
 }
 
@@ -81,7 +90,7 @@
 
 @media screen and (max-width: 992px) {
 
-
+  
     .prices{
 
         &__title {
@@ -89,12 +98,27 @@
             padding-bottom: 16px;
         }
 
-        &__menu {
+        &__links {
             padding-bottom: 25px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__links-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            & span {
+
+                // border: 2px solid orange;
+                // padding: 2px;
+                // border-radius: 5px;
+            }
         }
 
         &__list {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 0px;
         }
@@ -107,4 +131,9 @@
             margin-top: 5px;
         }
     }
+
+    .active {
+        display: flex;
+    }
+
 }
