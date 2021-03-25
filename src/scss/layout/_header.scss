@@ -19,6 +19,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        position: relative;
     }
 
     &__hero {
@@ -32,13 +33,13 @@
 
     &__title {
         font-weight: 600;
-        font-size: $main-font-size ;    
+        font-size: $title-font-size ;    
     }
 
     &__description {
         padding-top: 16px;
         padding-bottom: 40px;
-        font-size: $main-font-size / 2.4;
+        font-size: 20px;
         line-height: 24px;
     }
 
@@ -87,6 +88,30 @@
 @media screen and (max-width: 992px) {
 
     .header{
+        // height: 70vh;
+        
+        &__title {
+            font-size: 36px;
+        }
+        &__btn{
+            padding-top: 50px;
+            padding-bottom: 40px;
+            // position: absolute;
+            // right: 0;
+            // bottom: 0;
+            // margin-left: auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__description {
+            font-size: 16px;
+        }
+
+        &__links {
+            align-items: flex-start;
+            padding-top: 15px;
+        }
 
         &__image {
 

@@ -32,4 +32,17 @@
         max-height: 34px;
         padding: 10px 20px;
     }
+    &:hover {
+        box-shadow: 2px 2px 2px 2px #fb9475;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn {
+        &_small {
+            max-width: 112px;
+            max-height: 44px;
+            padding: 15px 25px;
+        }
+    }
 }

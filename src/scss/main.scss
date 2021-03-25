@@ -8,6 +8,7 @@
     outline: none;
     font-family: "Montserrat", sans-serif;
     cursor: default;
+    transition: .3s;
 }
 
 body {
@@ -57,3 +58,40 @@ footer {
     background-color: #ffffff;
 }
 
+@media screen and (max-width: 992px) {
+    .main {
+        &__about {
+            padding-top: $bloks-distance;
+            padding-bottom: $bloks-distance / 2; 
+        }
+    
+        &__products {
+            padding-top: $bloks-distance / 2;
+            padding-bottom: $bloks-distance / 2;
+        }
+    
+        &__prices {
+            padding-top: $bloks-distance / 2;
+            padding-bottom: $bloks-distance / 2;
+        }
+    
+        &__masters {
+            padding-top: $bloks-distance * 0.8;
+            padding-bottom: $bloks-distance * 0.8;
+        }
+        
+        &__portfolio {
+            padding-top: $bloks-distance;
+            padding-bottom: $bloks-distance;
+        }
+    
+        &_dark-background {
+            background-color: #f8f6f7;
+        }
+        
+        &__contacts {
+            padding-top: $bloks-distance * 0.4;
+            padding-bottom: $bloks-distance * 0.4;
+        }
+    }
+}
