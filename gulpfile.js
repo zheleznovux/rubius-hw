@@ -39,10 +39,17 @@ function html() {
             .pipe(browserSync.stream());
 }
 
+function js() {
+    return  src('src/**/*.js')
+            .pipe(dest('dist/'))
+            .pipe(browserSync.stream());
+}
+
 function liveServer()
 {
     watch('src/scss/**/*.scss', buildSass);
     watch('src/**/*.html',html);
+    watch('src/**/*.js',js);
 }
 
 function copy()
