@@ -58,7 +58,7 @@
 
         &::after {
             cursor: pointer;
-            content: url("/images/loupe.png");
+            content: url("../images/loupe.png");
             position: absolute;
             top: 35%;
             transform: translateY(-50%);

@@ -49,7 +49,6 @@ function liveServer()
 {
     watch('src/scss/**/*.scss', buildSass);
     watch('src/**/*.html',html);
-    watch('src/**/*.js',js);
 }
 
 function copy()
@@ -67,5 +66,5 @@ function cleanDist()
 exports.liveServer = liveServer;
 exports.buildSass = buildSass;
 
-exports.build = series(cleanDist,buildSass, html, copy);
+exports.build = series(cleanDist, buildSass, html, js, copy);
 exports.default = series(buildSass, parallel(browsersync, liveServer));

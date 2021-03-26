@@ -56,15 +56,15 @@ class MyNav {
 
     openNav() {
         this.navIsOpen = true;
-        this.btn.classList.toggle('animate');
-        document.body.classList.toggle('fixed');
+        this.btn.classList.toggle('animate', true);
+        document.body.classList.toggle('fixed', true);
         return this.nav.querySelector('.overlay').style.height = "100%";
     }
 
     closeNav() {
         this.navIsOpen = false;
-        this.btn.classList.toggle('animate');
-        document.body.classList.toggle('fixed');
+        this.btn.classList.toggle('animate', false);
+        document.body.classList.toggle('fixed', false);
         return this.nav.querySelector('.overlay').style.height = "0%";
     }
 }
