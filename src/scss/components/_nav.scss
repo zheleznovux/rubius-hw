@@ -113,7 +113,7 @@
 $bar-width: 25px;
 $bar-height: 4px;
 $bar-spacing: 6px;
-$bar-color: #333;
+$bar-color: #333333;
 
 .hamburger-menu,
 .hamburger-menu::after,
@@ -124,7 +124,7 @@ $bar-color: #333;
 
 .hamburger-menu {
     position: relative;
-    background: $bar-color;
+    background: #fb9475;
     transition: all 0ms 300ms;
 
     &.animate {

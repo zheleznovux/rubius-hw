@@ -104,63 +104,63 @@ $(function () {
     });
 });
 
-// tabs module
-class TabItem {
-    constructor(link, content) {
-        this.link = link;
-        this.content = content;
-    }
+// // tabs module
+// class TabItem {
+//     constructor(link, content) {
+//         this.link = link;
+//         this.content = content;
+//     }
 
-    onClick(callback) {
-        this.link.addEventListener('click', () => callback());
-    }
+//     onClick(callback) {
+//         this.link.addEventListener('click', () => callback());
+//     }
 
-    activate() {
-        this._toggle(true);
-    }
+//     activate() {
+//         this._toggle(true);
+//     }
 
-    deactivate() {
-        this._toggle(false);
-    }
+//     deactivate() {
+//         this._toggle(false);
+//     }
 
-    _toggle(activate) {
-        this.link.classList.toggle('active-links', activate);
-        this.content.classList.toggle('active', activate);
-    }
-}
+//     _toggle(activate) {
+//         this.link.classList.toggle('active-links', activate);
+//         this.content.classList.toggle('swiper-slide-active', activate);
+//     }
+// }
 
 
-class TabsManager {
+// class TabsManager {
 
-    constructor(tabsElem) {
-        this.tabs = [];
-        this.activeTab = null;
+//     constructor(tabsElem) {
+//         this.tabs = [];
+//         this.activeTab = null;
 
-        this.init(tabsElem);
-        this.activateTab(this.tabs[0]);
-    }
+//         this.init(tabsElem);
+//         this.activateTab(this.tabs[0]);
+//     }
 
-    init(tabsElem) {
-        const links = tabsElem.querySelectorAll('.prices__links-item');
-        const contents = tabsElem.querySelectorAll('.prices__list');
+//     init(tabsElem) {
+//         const links = tabsElem.querySelectorAll('.prices__links-item');
+//         const contents = tabsElem.querySelectorAll('.prices__list');
 
-        for (let i = 0; i < links.length; i++) {
-            const tab = new TabItem(links[i], contents[i]);
-            this.tabs.push(tab);
+//         for (let i = 0; i < links.length; i++) {
+//             const tab = new TabItem(links[i], contents[i]);
+//             this.tabs.push(tab);
 
-            tab.onClick(() => this.activateTab(tab));
-        }
-    }
+//             tab.onClick(() => this.activateTab(tab));
+//         }
+//     }
 
-    activateTab(tab) {
-        if (this.activeTab) {
-            this.activeTab.deactivate();
-        }
+//     activateTab(tab) {
+//         if (this.activeTab) {
+//             this.activeTab.deactivate();
+//         }
 
-        this.activeTab = tab;
-        this.activeTab.activate();
-    }
-}
+//         this.activeTab = tab;
+//         this.activeTab.activate();
+//     }
+// }
 
 
 //  form module
@@ -201,12 +201,45 @@ class Form {
 }
 
 window.onload = function () {
-    const tabsElem = document.getElementById('prices');
-    new TabsManager(tabsElem);
+    // const tabsElem = document.getElementById('prices');
+    // new TabsManager(tabsElem);
 
     const formElement = document.getElementById('feedback-form');
     new Form(formElement);
 
     const nav = new MyNav('nav');
 
+
+    swiperTabsNav = new Swiper(".swiper-tabs-nav", {
+        centeredSlides: true,
+        autoWidth: true,
+        slideToClickedSlide:true,
+        loop: true,
+        breakpoints: {
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            }
+          }
+      });
+      
+      // Swiper Content
+      swiperTabsContent = new Swiper(".swiper-tabs-content", {
+        spaceBetween: 5,
+        loop: true,
+        longSwipes: true,
+        resistanceRatio: 0, // Disable First and Last Swiper
+        watchOverflow: true,
+        thumbs: {
+          swiper: swiperTabsNav
+        }
+      });
+      
 }
+
+// const swiper = new Swiper('.swiper-container');
+

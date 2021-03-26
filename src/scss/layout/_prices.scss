@@ -2,11 +2,13 @@
     &__title {
         font-weight: 600;
         font-size: 48px;
-        padding-bottom: 32px;
+        padding-bottom: 16px;
     }
-
+    &__section-tabs {
+        padding-top: 16px;
+    }
     &__list {
-        display: none;
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 36px;
@@ -14,48 +16,39 @@
     }
 
     &__list-item {
-        flex-basis: 40%;
+        flex-basis: 45%;
     }
 
     &__links {
-        padding-bottom: 50px;
+        padding-bottom: 15px!important;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-bottom: 50px;
-        justify-content: space-between;
     }
 
     &__links-item {
-        margin-left: 20px;
-        margin-right: 20px;
-        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-weight: 500;
         font-size: 14px;
-        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        padding-bottom: 10px;
+        
+        &.swiper-slide-thumb-active {
+            border-bottom: 2px solid #00bf78;
+            color: #00bf78;
+            box-shadow: 0 8px 5px -6px grey;
+            transition: .2s;
+        }
 
-        & span {
-            cursor: pointer;
-            transition: 0.1s;
-
-            &:hover {
-                color: #00bf78;
-            }
+        &:hover {
+            color: #00bf78;
+            border-bottom: 2px solid #00bf78;
+            transition: .1s;
         }
     }
 }
 
-.active {
-    display: flex;
-}
-
-.active-links {
-    & span {
-        font-weight: 500;
-        color: #00bf78;
-        border-color: #00bf78;
-        border-bottom: 2px solid;
-    }
-}
 
 .price {
     display: flex;
@@ -93,9 +86,6 @@
 
         &__links {
             padding-bottom: 25px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
         }
 
         &__links-item {
@@ -104,7 +94,7 @@
         }
 
         &__list {
-            display: none;
+            display: flex;
             flex-direction: column;
             gap: 0px;
         }
@@ -116,9 +106,5 @@
             margin-bottom: 5px;
             margin-top: 5px;
         }
-    }
-
-    .active {
-        display: flex;
     }
 }
