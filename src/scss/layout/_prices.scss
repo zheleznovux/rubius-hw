@@ -20,7 +20,7 @@
     }
 
     &__links {
-        padding-bottom: 15px!important;
+        padding-bottom: 15px !important;
         display: flex;
     }
 
@@ -33,22 +33,21 @@
         cursor: pointer;
         text-align: center;
         padding-bottom: 10px;
-        
+
         &.swiper-slide-thumb-active {
             border-bottom: 2px solid #00bf78;
             color: #00bf78;
             box-shadow: 0 8px 5px -6px grey;
-            transition: .2s;
+            transition: 0.2s;
         }
 
         &:hover {
             color: #00bf78;
             border-bottom: 2px solid #00bf78;
-            transition: .1s;
+            transition: 0.1s;
         }
     }
 }
-
 
 .price {
     display: flex;
