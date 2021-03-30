@@ -1,4 +1,4 @@
-@import '../var';
+@import "../var";
 
 .contacts {
     display: flex;
@@ -8,7 +8,6 @@
     &__title {
         font-weight: bold;
         font-size: 48px;
-        // line-height: 59px;
         color: $main-color;
         padding-top: 38px;
         padding-bottom: 22px;
@@ -54,22 +53,20 @@
 
 @media screen and (max-width: 992px) {
     .contacts {
-
-        &__title{
+        &__title {
             font-size: 36px;
             padding-top: 19px;
             padding-bottom: 11px;
         }
 
-        &__description{
+        &__description {
             font-size: 14px;
         }
     }
 }
 
-@media only screen and (max-width:768px){
-
+@media only screen and (max-width: 768px) {
     .contacts {
         flex-direction: column;
-    }    
+    }
 }

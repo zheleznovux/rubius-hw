@@ -6,6 +6,8 @@ const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
 
 
 function buildSass() {
@@ -39,9 +41,19 @@ function html() {
             .pipe(browserSync.stream());
 }
 
+function js() {
+    return  src('src/index.js')
+            .pipe(webpackStream(require('./webpack.config.js')))
+            .pipe(rename('main.min.js'))
+            .pipe(dest('src/js'))
+            .pipe(dest('dist/js'))
+            .pipe(browserSync.stream());
+}
+
 function liveServer()
 {
     watch('src/scss/**/*.scss', buildSass);
+    watch(['src/js/**/*.js', '!src/js/**/*.min.js'], js);
     watch('src/**/*.html',html);
 }
 
@@ -60,5 +72,5 @@ function cleanDist()
 exports.liveServer = liveServer;
 exports.buildSass = buildSass;
 
-exports.build = series(cleanDist,buildSass, html, copy);
-exports.default = series(buildSass, parallel(browsersync, liveServer));
+exports.build = series(cleanDist, buildSass, html, js, copy);
+exports.default = series([buildSass, js], parallel(browsersync, liveServer));

@@ -1,21 +1,117 @@
 // imported brands from '../components/brands';
+// imported arrow from '../components/arrow';
+
+.slick-track {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 .portfolio {
-    
+    &__carousel {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     &__title {
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
-        // line-height: 59px;
+        line-height: 48px;
     }
 
     &__brands {
         padding-top: 100px;
     }
+
+    &__img {
+        position: relative;
+        cursor: grab;
+        height: 338px;
+        max-width: 338px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        transition: 0.3s;
+
+        &::before {
+            content: "Увеличить";
+            padding-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+            text-align: center;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            opacity: 0;
+            transition: 0.3s opacity;
+        }
+
+        &::after {
+            cursor: pointer;
+            content: url("../images/loupe.png");
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 120px;
+            opacity: 0;
+        }
+
+        &:hover::after,
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        position: relative;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn-left,
+    &__btn-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        color: green;
+        font-size: 14px;
+        border-radius: 50%;
+        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        border: none;
+        transition: 0.3s;
+        margin-left: 15px;
+
+        &:hover {
+            background: #dfdede;
+        }
+    }
 }
 
-.brands{
-    &__title{
+.brands {
+    &__title {
         font-size: 16px;
         line-height: 20px;
         text-align: center;
@@ -30,7 +126,7 @@
         align-items: center;
 
         & > img {
-            object-fit:scale-down;
+            object-fit: scale-down;
             padding: 15px;
         }
     }
@@ -38,13 +134,32 @@
 
 @media screen and (max-width: 992px) {
     .portfolio {
-    
         &__title {
             font-size: 36px;
         }
 
         &__brands {
             padding-top: 50px;
+        }
+
+        &__btn-left,
+        &__btn-right {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .brands {
+        &__images > img {
+            flex-basis: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio {
+        &__img:hover {
+            transform: none;
         }
     }
 }

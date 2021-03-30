@@ -4,7 +4,6 @@
     &__title {
         font-weight: 700;
         font-size: 48px;
-        // line-height: 59px;
         padding-bottom: 32px;
     }
 
@@ -64,7 +63,7 @@
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
-        
+
         & span {
             padding-top: 10px;
             color: #ffffff;
@@ -110,10 +109,8 @@
     }
 }
 
-
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .about {
-
         &__title {
             font-size: 36px;
             padding-bottom: 16px;

@@ -8,15 +8,21 @@
     outline: none;
     font-family: "Montserrat", sans-serif;
     cursor: default;
-    transition: .3s;
+    transition: width .3;
 }
 
 body {
     min-width: 320px;
     color: $main-color;
+    overflow-x:hidden;
+    overflow-y:auto;
+    &.fixed{
+        overflow:hidden;
+    }
 }
 
 .main {
+    
     &__about {
         padding-top: $bloks-distance * 2;
         padding-bottom: $bloks-distance; 

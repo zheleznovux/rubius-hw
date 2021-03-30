@@ -2,53 +2,51 @@
     &__title {
         font-weight: 600;
         font-size: 48px;
-        // line-height: 59px;
-        padding-bottom: 32px;
+        padding-bottom: 16px;
     }
-
+    &__section-tabs {
+        padding-top: 16px;
+    }
     &__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, min-content);
-        column-gap: 15%;
-        row-gap: 36px;
-    }
-
-    &__menu {
-        padding-bottom: 50px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-bottom: 50px;
+        row-gap: 36px;
         justify-content: space-between;
     }
 
-    &__menu-item {
+    &__list-item {
+        flex-basis: 45%;
+    }
+
+    &__links {
+        padding-bottom: 15px !important;
+        display: flex;
+    }
+
+    &__links-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-weight: 500;
         font-size: 14px;
-        padding: 4px;
-        display: inline-block;
-        justify-content: center;
+        cursor: pointer;
+        text-align: center;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 10px;
 
-        & span {
-            border-bottom: 2px solid transparent;
-            cursor: pointer;
-            // transition: 0.3s;
-
-            &:hover {
+        &.swiper-slide-thumb-active {
+            border-bottom: 2px solid #00bf78;
             color: #00bf78;
-            // font-weight: 600;
-            border-color:  #00bf78;
-            }
+            box-shadow: 0 8px 5px -6px grey;
+            transition: 0.2s;
         }
-        
-        &_active {
-            // font-weight: 600;z
-            & span {
-                color: #00bf78;
-                border-bottom: 2px solid #00bf78;
-            }
+
+        &:hover {
+            color: #00bf78;
+            border-bottom: 2px solid #00bf78;
+            transition: 0.1s;
         }
-        
     }
 }
 
@@ -80,23 +78,25 @@
 }
 
 @media screen and (max-width: 992px) {
-
-
-    .prices{
-
+    .prices {
         &__title {
             font-size: 36px;
             padding-bottom: 16px;
         }
 
-        &__menu {
+        &__links {
             padding-bottom: 25px;
         }
 
+        &__links-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
         &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
         }
 
         &__list-item {
