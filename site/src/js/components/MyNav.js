@@ -3,15 +3,14 @@ export class MyNav {
 
     constructor(nav) {
         this.nav = document.getElementById(nav);
-        this.btn = this.nav.querySelector('.open-btn');
 
         this.initBtn();
         this.initLinks();
     }
 
-    // constructor() {} ???
-
     initBtn() {
+        this.btn = this.nav.querySelector('.open-btn');
+
         this.btn.oncontextmenu = false;
         this.navIsOpen = false;
 
@@ -21,21 +20,20 @@ export class MyNav {
     }
 
     initLinks() {
-        const links = this.nav.querySelectorAll('[href^="#"]');
+        this.nav.addEventListener('click', (e) => {
+            e.preventDefault();
+ 
+            let link = e.target.closest('[href^="#"]');
+            if(!link) return;
 
-        links.forEach((link) => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const id = link.getAttribute('href');
+            this.closeNav();
 
-                this.closeNav();
-
-                document.querySelector(id).scrollIntoView({
+            const id = link.getAttribute('href');
+            document.querySelector(id).scrollIntoView({
                     behavior: 'smooth',
                     block: 'start',
                 });
-            });
-        })
+        });
     }
 
     getNav() {
@@ -55,16 +53,18 @@ export class MyNav {
     }
 
     openNav() {
-        this.navIsOpen = true;
-        this.btn.classList.toggle('animate', true);
-        document.body.classList.toggle('fixed', true);
+        this.toogleNav(true);
         return this.nav.querySelector('.overlay').style.height = "100%";
     }
 
     closeNav() {
-        this.navIsOpen = false;
-        this.btn.classList.toggle('animate', false);
-        document.body.classList.toggle('fixed', false);
+        this.toogleNav(false);
         return this.nav.querySelector('.overlay').style.height = "0%";
+    }
+
+    toogleNav(isOpen) {
+        this.navIsOpen = isOpen;
+        this.btn.classList.toggle('animate', isOpen);
+        document.body.classList.toggle('fixed', isOpen);
     }
 }

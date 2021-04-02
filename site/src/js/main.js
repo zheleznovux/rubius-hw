@@ -1,12 +1,24 @@
-import {MyNav} from "./components/MyNav";
-import {Form} from "./components/Form";
-
+import { MyNav } from "./components/MyNav";
+import { Form } from "./components/forms/Form";
+import { BigForm } from "./components/forms/BigForm";
+import  {MinText } from "./components/MinText";
 
 window.onload = function () {
-    const formElement = document.getElementById('feedback-form');
-    new Form(formElement);
+    const bigFormElements = document.querySelectorAll('#feedback-form_big');
+    bigFormElements.forEach((elem) => {
+        new BigForm(elem);
+    });
+
+    const formElement = document.querySelectorAll('#feedback-form');
+    formElement.forEach((elem) => {
+        new Form(elem);
+    })
+    
+    
 
     const nav = new MyNav('nav');
+
+    const minText = new MinText("about-content");
 
     const swiperTabsNav = new Swiper(".swiper-tabs-nav", {
         centeredSlides: true,

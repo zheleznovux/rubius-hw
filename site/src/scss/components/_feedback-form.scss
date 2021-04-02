@@ -11,7 +11,7 @@
 
 .feedback-form {
     max-width: 445px;
-    max-height: 406px;
+    // max-height: 406px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -36,7 +36,19 @@
 
     &__user-contacts {
         display: flex;
+        flex-direction: column;
         padding: 10px 0;
+
+        & select{
+            // width: 100%;
+            // resize: none;
+            padding: 10px;
+            border: 1px solid #d8d8d8;
+            box-sizing: border-box;
+            border-radius: 6px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
 
         & input {
             width: 100%;

@@ -77,9 +77,12 @@
         z-index: 1;
     }
 
-    &__btn {
+    &__btn{
         padding-top: 20px;
         padding-bottom: 20px;
+        &:hover  {
+            text-decoration: none!important;
+        }
     }
 }
 @media screen and (max-width: 992px) {

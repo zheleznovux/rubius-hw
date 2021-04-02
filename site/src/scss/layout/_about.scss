@@ -30,16 +30,29 @@
     &__sub-description {
         font-size: 16px;
         line-height: 26px;
+        display: none;
+        transition: all .3s linear;
+        opacity: 0;
+        &.visible{
+            transition: all .3s linear;
+            opacity: 1;
+        } 
+        &.show{
+            display: block;
+        }
     }
 
     &__optional {
+        border: none;
+        background-color: transparent;
+        text-align: left;
         font-size: 14px;
         line-height: 17px;
         color: #278aff;
         text-decoration: none;
         cursor: pointer;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px 0px;
+        // padding-bottom: 10px;
     }
 
     &__video {
