@@ -40,7 +40,7 @@ export class Form {
             }
         });
 
-        if (counter = 2) {
+        if (counter == 2) {
             this.sendData(formData);
         }
 
