@@ -54,24 +54,39 @@ export class BigForm extends Form {
 
     async updateServiceData() 
     {
+        let data = [];
         const select = this.formElement.querySelector(`[name="serviceId"]`);
 
-        const data = await ApiService.getSaloonServices();
-
-        data.forEach((el) => {
-            select.append(this.createServiceEl(el));
-        })
+        try 
+        {
+            data = await ApiService.getSaloonServices();
+            console.log(data);
+            data.forEach((el) => {
+                select.append(this.createServiceEl(el));
+            });
+        } 
+        catch(err)
+        {
+            console.error(err);
+        }
     }
 
     async updateMastersData() 
     {
+        let data = []; 
         const select = this.formElement.querySelector(`[name="masterId"]`);
 
-        const data = await ApiService.getMasters();
-
-        data.forEach((el) => {
-            select.append(this.createStaffEl(el));
-        })
+        try 
+        {
+            data = await ApiService.getMasters();
+            data.forEach((el) => {
+                select.append(this.createStaffEl(el));
+            })
+        } 
+        catch(err)
+        {
+            console.error(err);
+        }
     }
 
     createServiceEl(data) {
