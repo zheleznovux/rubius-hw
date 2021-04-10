@@ -1,12 +1,15 @@
 import IMask from 'imask';
-import { Loader } from "../Loader";
+import { FormLoader } from "./Loader";
 import ApiServis from '../../services/api-service';
 
 export class Form {
     
-    constructor(element) {
-        this.element = element;
-        this.formElement = element.querySelector("#form");
+    constructor(element, formElement = "form") {
+        this.element = document.getElementById(element);
+
+        formElement = '#' + formElement;
+        this.formElement = this.element.querySelector(formElement);
+        
         this.inputs = this.formElement.querySelectorAll('input');
 
         this.init();
@@ -48,7 +51,7 @@ export class Form {
 
     async sendData(formData) {
 
-        const loader = new Loader("loader");
+        const loader = new FormLoader("loader");
         try 
         {
             loader.visible();

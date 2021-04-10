@@ -1,4 +1,4 @@
-export class Loader {
+export class FormLoader {
     constructor(elem) {
         this.elem = document.getElementById(elem);
 

@@ -4,17 +4,9 @@ import { BigForm } from "./components/forms/BigForm";
 import  {MinText } from "./components/MinText";
 
 window.onload = function () {
-    const bigFormElements = document.querySelectorAll('#feedback-form_big');
-    bigFormElements.forEach((elem) => {
-        new BigForm(elem);
-    });
-
-    const formElement = document.querySelectorAll('#feedback-form');
-    formElement.forEach((elem) => {
-        new Form(elem);
-    })
+    new BigForm('feedback-form_big');
     
-    
+    new Form('feedback-form');
 
     const nav = new MyNav('nav');
 

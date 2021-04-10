@@ -1,3 +1,4 @@
+import { MaskedPattern } from 'imask';
 import ApiService from '../../services/api-service';
 import { Form } from './Form';
 
@@ -14,12 +15,12 @@ export class BigForm extends Form {
         {
             this.setDate();
 
-            this.updateMastersData();
-            this.updateServiceData();
+            await this.updateMastersData();
+            await this.updateServiceData();
         } 
         catch (err) 
         {
-            console.error(err);
+            console.err(err);
         }
         finally 
         {
@@ -54,15 +55,13 @@ export class BigForm extends Form {
 
     async updateServiceData() 
     {
-        let data = [];
         const select = this.formElement.querySelector(`[name="serviceId"]`);
 
         try 
         {
-            data = await ApiService.getSaloonServices();
-            console.log(data);
+            const data = await ApiService.getSaloonServices();
             data.forEach((el) => {
-                select.append(this.createServiceEl(el));
+                select.append(this.createElement(el));
             });
         } 
         catch(err)
@@ -72,15 +71,14 @@ export class BigForm extends Form {
     }
 
     async updateMastersData() 
-    {
-        let data = []; 
+    { 
         const select = this.formElement.querySelector(`[name="masterId"]`);
 
         try 
         {
-            data = await ApiService.getMasters();
+            const data = await ApiService.getMasters();
             data.forEach((el) => {
-                select.append(this.createStaffEl(el));
+                select.append(this.createElement(el));
             })
         } 
         catch(err)
@@ -89,17 +87,10 @@ export class BigForm extends Form {
         }
     }
 
-    createServiceEl(data) {
+    createElement(data) {
         const element = document.createElement("option");
         element.value = data.id;
-        element.textContent = data.name;
-        return element;
-    }
-
-    createStaffEl(data) {
-        const element = document.createElement("option");
-        element.value = data.id;
-        element.textContent = data.fullName;
+        element.textContent = data.name? data.name: data.fullName;
         return element;
     }
 
