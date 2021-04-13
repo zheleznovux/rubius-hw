@@ -1,0 +1,39 @@
+.Orders-form {
+
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 4px 2px 8px grey;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 15px;
+
+    
+
+    &__controls {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__control{
+        flex-basis: 49%;
+        height: 40px;
+        border-radius: 8px;
+        border:1px solid gray;
+        padding: 5px;
+    }
+
+    &__control-select {
+        flex-basis: 49%;
+        min-height: 85px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 8px;
+        border:1px solid gray;
+    }
+}
