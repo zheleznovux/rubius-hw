@@ -24,7 +24,7 @@ export default function MastersPage() {
 
 	async function createMaster(master, formData) {
 		const { id } = masters[masters.length - 1];
-		master.id = id+1;																///!
+		master.id = id+1;	
 		try
 		{
 			await ApiService.addMasters(formData);
