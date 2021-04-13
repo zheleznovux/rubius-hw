@@ -1,2 +1,4 @@
-export const API_PATH = 'http://localhost:3001/api';
+export const API_PATH = 'https://beautty-saloon-server.herokuapp.com/api';
 export const TOKEN_KEY = 'access_token';
+
+https://beautty-saloon-server.herokuapp.com/api/swagger/
