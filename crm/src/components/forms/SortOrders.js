@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import bem from 'easy-bem';
 import cn from 'classnames';
 

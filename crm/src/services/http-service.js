@@ -1,6 +1,5 @@
 import TokenService from './token-service';
 import PubSub from './pubSub';
-import { Ref } from 'react'
 
 export class HttpService {
 

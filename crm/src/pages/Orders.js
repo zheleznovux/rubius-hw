@@ -22,7 +22,7 @@ export default function OrdersPage() {
 		}
 
 		fetchData();
-	}, [ ,isFeature]);
+	}, [ isFeature]);
 
     async function createOrder(order) {
 		try

@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import bem from 'easy-bem';
-import cn from 'classnames';
 import ordersContext from '../../contexts/ordersContext';
 import OrderEditor from './OrderEditor';
 import './Order.scss';
@@ -10,7 +9,6 @@ const b = bem('Order');
 
 export default function Order({  className, order}) {
     const { id, customer, master = '', service = '', visitDate = '', status } = order;
-    const _className = cn(b(), className);
     const [ isModalOpen, setIsModalOpen ] = useState(false);
     
     function getDate(visitDate) {
