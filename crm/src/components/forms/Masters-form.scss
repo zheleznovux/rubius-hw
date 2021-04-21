@@ -1,0 +1,13 @@
+.Masters-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__control{
+        flex-basis: 25%;
+        height: 40px;
+        border-radius: 8px;
+        margin: 1px;
+        border: 1px solid gray;
+    }
+}

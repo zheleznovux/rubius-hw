@@ -1,0 +1,30 @@
+.Master {
+
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 10px!important;
+    // margin: 10px;
+    
+    &__photo {
+        margin-top: 10px;
+        height: 250px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px;
+    }
+
+    &__name {
+        padding: 10px 0 10px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__position {
+        padding-bottom: 10px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 400;
+    }
+}
